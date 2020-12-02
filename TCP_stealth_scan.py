@@ -1,3 +1,13 @@
+import logging
+# logging.getLogger(“scapy.runtime”).setLevel(logging.ERROR)
+from scapy.all import *
+
+
+logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
+dst_ip = "10.0.0.1"
+src_port = RandShort()
+dst_port = 80
+
 
 """
 This technique is similar to the TCP connect scan. The client sends a TCP packet with the SYN flag set and the port number to connect to.
